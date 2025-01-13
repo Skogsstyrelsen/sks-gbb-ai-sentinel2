@@ -1,0 +1,46 @@
+{
+    "spruce_historical_damage": {
+        "apis": [
+            "sentinel_2_2_0"
+        ],
+        "prediction_masks": [
+            {
+                "api": "marktackedata_2_0",
+                "apis_params_pre_method": [],
+                "channels": [
+                    0
+                ],
+                "mask_values": [
+                    [
+                        111,
+                        112,
+                        113,
+                        114,
+                        121,
+                        122,
+                        123,
+                        124
+                    ]
+                ]
+            }
+        ],
+        "params_settings": [
+            {
+                "config": "spruce_historical_damage",
+                "apis": [
+                    "sentinel_2_2_0"
+                ],
+                "rendering_rules": [
+                    "ndvi",
+                    "rgb",
+                    "swir"
+                ],
+                "pre_dates": 2,
+                "post_dates": 2,
+                "geometric_correction": true,
+                "radiometric_correction": true
+            }
+        ],
+        "polygon_filtering_method": "empty"
+    }
+}

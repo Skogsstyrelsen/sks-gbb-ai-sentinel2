@@ -1,0 +1,1 @@
+python BatchInference.py --weights data/best_model.pth --filename data/[526560,6495000,529120,6497560].tiff --input_channels 28 --output_channels 1 --algorithm AttentionCENet  --configuration spruce_historical_damage --config_file utils/configurations.json --output_path output/

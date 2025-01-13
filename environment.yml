@@ -1,0 +1,14 @@
+# Run
+# conda env create -f environment.yml
+# to create an envrionment
+name: GBB_env
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.8  
+  - numpy=1.24.3
+  - requests=2.32.3
+  - shapely=2.0.5
+  - gdal=3.6.2
+  - pytorch::pytorch
