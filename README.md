@@ -1,4 +1,4 @@
-# Multi Dim Pixel Classifier
+# Detecting Spruce Bark Beetle damages with Sentinel-2
 
 ## Introduction 
 This software can be used to create probability maps with AI from geo-referenced tiff-files. The probability maps aims show where there are risks that trees have been infected by the spruce bark beetle.
@@ -17,7 +17,7 @@ A computer with conda installed.
 2. Install anaconda or miniconda and create a conda environment.
    Create the conda environment with all required packages and activate the environment.
    ```
-   conda env create -f environment.yaml
+   conda env create -f environment.yml
    conda activate GBB_env
    ```
 3. Go to the folder with the repo and run 
@@ -66,6 +66,7 @@ Example command line:
 ```
 python BatchInference.py --weights data/best_model.pth --filename data/[526560,6495000,529120,6497560].tiff --input_channels 28 --output_channels 1 --algorithm AttentionCENet  --configuration spruce_historical_damage --config_file utils/configurations.json --output_path output/
 ```
+with the above command a tiff file should be produced in the output folder.
 
 ## Examples 
 Three channels of a 28 channel input file.

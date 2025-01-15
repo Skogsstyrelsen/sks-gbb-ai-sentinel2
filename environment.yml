@@ -11,4 +11,4 @@ dependencies:
   - requests=2.32.3
   - shapely=2.0.5
   - gdal=3.6.2
-  - pytorch::pytorch
+  - pytorch::pytorch=2.4.1

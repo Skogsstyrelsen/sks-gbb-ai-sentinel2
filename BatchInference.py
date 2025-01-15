@@ -4,9 +4,12 @@ import numpy as np
 import pathlib
 import platform
 import os
+os.environ["USE_PATH_FOR_GDAL_PYTHON"] = "YES"
 from osgeo import gdal
 import json
 import pdb
+# 'GDAL_DATA': 'C:\\Users\\sijo11\\AppData\\Local\\miniconda3\\envs\\GBB_env\\Library\\share\\gdal', 
+# 'GDAL_DRIVER_PATH': 'C:\\Users\\sijo11\\AppData\\Local\\miniconda3\\envs\\GBB_env\\Library\\lib\\gdalplugins', 
 
 from utils.model.load_model import load_model
 
@@ -78,11 +81,11 @@ def main(opt):
         print("name of file: {}".format(image_name))
         return
     arr, ds = read_geotiff(image_name)
-    geoTransform = ds.GetGeoTransform()
-    minx = geoTransform[0]
-    maxy = geoTransform[3]
-    miny = maxy + geoTransform[5] * ds.RasterYSize
-    maxx = minx + geoTransform[1] * ds.RasterXSize
+    geo_transform = ds.GetGeoTransform()
+    minx = geo_transform[0]
+    maxy = geo_transform[3]
+    miny = maxy + geo_transform[5] * ds.RasterYSize
+    maxx = minx + geo_transform[1] * ds.RasterXSize
     
     
     # Calculate image coordinates in sweref99
