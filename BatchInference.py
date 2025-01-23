@@ -8,8 +8,6 @@ os.environ["USE_PATH_FOR_GDAL_PYTHON"] = "YES"
 from osgeo import gdal
 import json
 import pdb
-# 'GDAL_DATA': 'C:\\Users\\sijo11\\AppData\\Local\\miniconda3\\envs\\GBB_env\\Library\\share\\gdal', 
-# 'GDAL_DRIVER_PATH': 'C:\\Users\\sijo11\\AppData\\Local\\miniconda3\\envs\\GBB_env\\Library\\lib\\gdalplugins', 
 
 from utils.model.load_model import load_model
 
